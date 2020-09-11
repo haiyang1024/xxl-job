@@ -51,7 +51,7 @@ public class MailUtil implements Runnable {
         Session session = Session.getDefaultInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(fromMail, "skcamfeddzjfeaig");
+                return new PasswordAuthentication(fromMail, "16位验证码");
             }
         });
 
@@ -62,7 +62,7 @@ public class MailUtil implements Runnable {
         Transport transport = session.getTransport();
 
         //连接服务器
-        transport.connect("smtp.qq.com", fromMail, "skcamfeddzjfeaig");
+        transport.connect("smtp.qq.com", fromMail, "16位验证码");
 
         //创建邮件对象
         MimeMessage mimeMessage = new MimeMessage(session);
@@ -109,7 +109,7 @@ public class MailUtil implements Runnable {
         Session session = Session.getDefaultInstance(properties, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(fromEmail, "skcamfeddzjfeaig");
+                return new PasswordAuthentication(fromEmail, "16位验证码");
             }
         });
 
@@ -120,7 +120,7 @@ public class MailUtil implements Runnable {
         Transport transport = session.getTransport();
 
         //连接服务器
-        transport.connect("smtp.qq.com", fromEmail, "skcamfeddzjfeaig");
+        transport.connect("smtp.qq.com", fromEmail, "16位验证码");
 
         //创建邮件对象
         MimeMessage mimeMessage = new MimeMessage(session);
@@ -162,7 +162,7 @@ public class MailUtil implements Runnable {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 //传入发件人的姓名和授权码
-                return new PasswordAuthentication(fromMail, "skcamfeddzjfeaig");
+                return new PasswordAuthentication(fromMail, "16位验证码");
             }
         });
 
@@ -170,7 +170,7 @@ public class MailUtil implements Runnable {
         Transport transport = session.getTransport();
 
         //3、通过transport对象邮箱用户名和授权码连接邮箱服务器
-        transport.connect("smtp.qq.com", fromMail, "skcamfeddzjfeaig");
+        transport.connect("smtp.qq.com", fromMail, "16位验证码");
 
         //4、创建邮件,传入session对象
         MimeMessage mimeMessage = complexEmail(session, fromMail, toMail,title,msg,type);
